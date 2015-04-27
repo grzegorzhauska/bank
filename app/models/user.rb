@@ -11,5 +11,11 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  has_one :account, inverse_of: :account
+  has_one :account, inverse_of: :user
+
+  after_create :create_account
+
+  def create_account
+    Account.create(user_id: id)
+  end
 end
