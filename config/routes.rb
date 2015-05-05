@@ -3,4 +3,7 @@ Rails.application.routes.draw do
   get '/dashboard', to: 'dashboard#index'
   devise_for :users
   resources :users
+  namespace :api do
+    resources :transfers
+  end
 end

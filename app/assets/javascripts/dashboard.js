@@ -1,0 +1,2 @@
+
+//$(window).ready(alert('dupa'));
