@@ -7,9 +7,9 @@ module Api
     # POST /api/{plural_resource_name}
     def create
       set_resource(resource_class.new(resource_params))
-
+      #binding.pry
       if get_resource.save
-        render :show, status: :created
+        render nothing: true, status: :created
       else
         render json: get_resource.errors, status: :unprocessable_entity
       end

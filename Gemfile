@@ -8,6 +8,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'kaminari' # adds pagination to ActiveModels
+gem 'active_model_serializers', '~> 0.8.3'
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'

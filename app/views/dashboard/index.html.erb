@@ -1,3 +1,12 @@
 <h3>Dashboard</h3>
 <p>Welcome <%= current_user.name %></p>
-<p>Balance: <%= current_user.account.balance %></p>
+<p>Balance: <div id="balance"><%= current_user.account.balance %></div></p>
+
+
+<form name="ajaxform" id="ajaxform" action="api/transfers" method="POST">
+    from: <input type="text" name="transfer[from_account_id]" value ="<%= current_user.account.id %>"/> <br/>
+    value: <input type="text" name="transfer[value]" value ="10" /> <br/>
+    to user: <input type="text" name="transfer[to_user]" value="1"/> <br/>
+     <button id="target" type="button">Click Me!</button>
+</form>
+
