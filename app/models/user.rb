@@ -13,6 +13,8 @@ class User < ActiveRecord::Base
 
   has_one :account, inverse_of: :user
 
+  validates :name, uniqueness: true
+
   after_create :create_account
 
   def create_account

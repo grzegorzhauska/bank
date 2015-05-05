@@ -20,7 +20,7 @@ module Api
 
     def set_to_account
 
-      @to_account = User.find_by_name!(params[:to_user]).account
+      @to_account = User.find_by_name!(params[:transfer][:to_user]).account
       #binding.pry
     end
 
