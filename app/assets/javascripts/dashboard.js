@@ -3,7 +3,7 @@ $(window).ready(function() {
 
 $("#ajaxform").submit(function(e){
 
-  alert("dupa");
+  //alert("dupa");
     var postData = $(this).serializeArray();
     var formURL = $(this).attr("action");
     $.ajax(
