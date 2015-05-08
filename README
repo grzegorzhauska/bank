@@ -1,5 +1,8 @@
-unique usr.name
+unique user.name
 add tests
+no negative transfer
+limit on account credit
+list of transfers
 
 
 
